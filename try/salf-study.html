@@ -3,13 +3,78 @@
 <head>
 <meta charset="utf-8">
 <title>故事集</title>
+<link href="css/firsttype.css" rel="stylesheet"
+ type="text/css">
+<script type="application/javascript">
+function show1()
+{
+	var oDiv = document.getElementById("iframe_a");
+	oDiv.innerHTML="&nbsp; &nbsp; &nbsp; &nbsp;昨天去公园玩，看到不远处围了一群人，都在叽叽喳喳的讲着什么，我便也过去看看热闹。<br/>&nbsp; &nbsp; &nbsp; &nbsp;过去一看，一个小姑娘戴着个大口罩，脸都快全遮住了，表情很忧伤，旁边一个男人拿着话筒，絮絮叨叨地说着什么，后面还有个人在录相。后面挂了个红色条幅，上面写着“我是艾滋病HIV携带者，我是安全的，请给我一个拥抱！”<br/>&nbsp; &nbsp; &nbsp; &nbsp;那男人在做着宣传：“拥抱不会传染艾滋病，请给予艾滋病HIV携带者足够的尊重！”<br/>&nbsp; &nbsp; &nbsp; &nbsp;围着的一群人都默不作声，大家都保持着与那几个人的距离，很多人还露出不屑的表情。<br/>&nbsp; &nbsp; &nbsp; &nbsp;我是医疗行业人员，平日工作也了解这种情景，于是我走到了那小姑娘跟前，毫不犹豫给了她一个拥抱。<br/>&nbsp; &nbsp; &nbsp; &nbsp;众人开始骚动起来，我看到那戴口罩的姑娘还有那两个人都露出了欣喜的表情，我也洋洋得意起来。<br/>&nbsp; &nbsp; &nbsp; &nbsp;录相的人马上把镜头对准了我，那男人也把话筒递到我面前，激动得说：“这位先生真是勇敢，你做了一个男人应该做的”，然后又轻蔑得看了看周围的其他人，似乎还发出了一声冷笑。<br/>&nbsp; &nbsp; &nbsp; &nbsp;他又转回头，继续问到：“请问这位先生，您是出于什么原因，这样勇敢而毫不犹豫地拥抱了这位艾滋病HIV携带者呢？”<br/>&nbsp; &nbsp; &nbsp; &nbsp;我看了看那个戴口罩的小姑娘，心想：“作为一个医护工作者，一定要有同理心”，顿时有了主意，我要说一个善意的谎言，我大声得说道：“拥抱不会传染HIV，请大家明白这一点，另外，我也是HIV携带者，请大家给予我们充分的尊重！”<br/>&nbsp; &nbsp; &nbsp; &nbsp;本来有些吵闹的人群突然安静了，大家都呆住了，突然戴口罩的小姑娘“哇”得一下哭了，一边哭一边说：“我不是啊，我不是，我只是志愿者啊！你这人怎么这样，你个死HIV！”<br/>&nbsp; &nbsp; &nbsp; &nbsp;大家也开始往外退，两个男人拉起那姑娘，一边骂骂咧咧，一边狼狈得跑掉了，人群也哄散了，只剩下我一个人呆呆得站在原地，像个傻子一样。";
+}
+</script>
 <style type="text/css">
 /*小故事。小视频*/	
 	
+	.shap{
+		position: relative;
+		float:left;
+		width: 180px;
+		text-align: center;
+		margin-left: 20px;
+		line-height: 40px;/*使这行文字实际占用的高度和div高度相同*/
+	}
 	
+	.shap-frame{
+		width: 100%;
+		height: 300px;
+	}
+	
+	.masks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 40px;
+    background:rgba(0,87,143,0.52);
+    color: #ffffff;
+    opacity: 0;
+	text-align: center;
+	line-height: 40px;/*使这行文字实际占用的高度和div高度相同*/
+		
+}
+	.shap:hover .masks {
+    opacity: 1;           
+}
+	
+	.base{
+		background-color: rgba(0,7,87,1.00);
+	}
 </style>
 </head>
 
 <body>
+	<div class="bodyshadow">
+	<div class="total">
+	<h1 align="center">小故事</h1>
+	<hr width="800px" class="total">
+	<div class="base">
+	<a href="#" onClick="show1()"><div class="shap" >一个拥抱<div class="masks" id="one">一个拥抱</div></div></a>
+	<div class="shap" >故事二<div class="masks" id="two">故事二</div></div>
+	<div class="shap" >故事三<div class="masks" id="three">故事三</div></div>
+	<div class="shap" >故事四<div class="masks" id="four">故事四</div></div>
+	</div>
+	<div class="total" >
+	<p class="wordtype" id="iframe_a">
+	请点击上方故事号，显示相应故事
+	</p>
+	</div>
+	<video width="800" controls autoplay>
+       	<source src="video/3306546_1_0.mp4" type="video/mp4">
+    </video>
+	<div>
+		<a href="index.html" style="text-decoration: none;"><h2 align="center">返回主界面</h2></a>
+	</div>
+	</div>
+	</div>
 </body>
 </html>
